@@ -8,11 +8,19 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "vite preview --host"
+    "start": "node server/index.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
+    "@fontsource/newsreader": "^5.1.0",
+    "@fontsource/public-sans": "^5.1.0",
+    "express": "^4.21.2",
+    "fuse.js": "^7.0.0",
+    "pdfjs-dist": "^4.10.38",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.1.5",
+    "undici": "^6.19.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

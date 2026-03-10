@@ -1,0 +1,8 @@
+.wrap { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: grid; place-items: center; z-index: 1000; }
+.modal { width: min(560px, 92vw); background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1.25rem 1.25rem 1rem; box-shadow: var(--shadow); }
+.modal h2 { margin: 0 0 .5rem; font-size: 1.25rem; }
+.modal p { margin: 0 0 1rem; color: var(--muted); }
+.actions { display: flex; gap: .5rem; }
+.primary { background: var(--accent); color: #fff; border: none; border-radius: 10px; padding: .6rem .85rem; cursor: pointer; }
+.secondary { border: 1px solid var(--line); color: var(--text); border-radius: 10px; padding: .55rem .85rem; text-decoration: none; background: rgba(255,255,255,.04); }
+.secondary:hover { border-color: #3a3a4a; }

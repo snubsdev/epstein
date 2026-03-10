@@ -1,0 +1,7 @@
+.section { padding: 1.25rem 1rem; }
+.title { font-size: .9rem; font-weight: 700; color: #7b8190; text-transform: uppercase; letter-spacing: .1em; margin: .75rem 0 1rem; border-left: 2px solid var(--accent); padding-left: .5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1rem; }
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+}

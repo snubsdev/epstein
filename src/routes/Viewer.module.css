@@ -1,0 +1,10 @@
+.viewer { min-height: 100vh; display: flex; flex-direction: column; }
+.toolbar { position: sticky; top: 0; z-index: 5; display: flex; gap: .5rem; align-items: center; padding: .5rem 1rem; backdrop-filter: saturate(140%) blur(6px); background: rgba(11,12,16,.6); border-bottom: 1px solid var(--line); }
+.toolbar button { background: rgba(255,255,255,.06); border: 1px solid var(--line); color: var(--text); padding: .45rem .65rem; border-radius: 8px; cursor: pointer; }
+.toolbar button:hover { border-color: #3a3a4a; }
+.info { color: var(--muted); min-width: 4rem; text-align: center; }
+.sep { width: 1px; height: 24px; background: var(--line); display: inline-block; margin: 0 .25rem; }
+.flex { flex: 1; }
+.stage { display: grid; place-items: center; padding: 1rem; }
+.canvas { box-shadow: var(--shadow); background: #fff; border-radius: 4px; max-width: 100%; height: auto; }
+.error { padding: 1rem; color: var(--muted); }
