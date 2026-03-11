@@ -25,7 +25,7 @@ export default function Viewer() {
         const url = `/proxy/pdf?url=${src}`
         const doc = await getDocument(url).promise
         if (!cancelled) { setPdf(doc); setPages(doc.numPages); setPage(1) }
-      } catch (e) {
+      } catch {
         if (!cancelled) setError('Could not load PDF via proxy. You can open it on justice.gov instead.')
       }
     })()

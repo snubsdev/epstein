@@ -26,7 +26,7 @@ export default function UtilityBar({ data, onFilter }) {
       results = results.map(s => ({ ...s, items: s.items.filter(i => hits.includes(i.url)) }))
     }
     onFilter(results)
-  }, [q, cat, data])
+  }, [q, cat, data, fuse, onFilter])
 
   return (
     <div className={styles.bar}>

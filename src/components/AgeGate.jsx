@@ -2,14 +2,15 @@ import { useEffect, useRef, useState } from 'react'
 import styles from './AgeGate.module.css'
 
 export default function AgeGate({ children }) {
-  const [ok, setOk] = useState(false)
+  const [ok, setOk] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return localStorage.getItem('epf_age_verified') === 'true'
+  })
   const firstBtn = useRef(null)
 
   useEffect(() => {
-    const v = localStorage.getItem('epf_age_verified') === 'true'
-    setOk(v)
-    if (!v) setTimeout(() => firstBtn.current?.focus(), 0)
-  }, [])
+    if (!ok) setTimeout(() => firstBtn.current?.focus(), 0)
+  }, [ok])
 
   if (ok) return children
 

@@ -6,11 +6,19 @@ function isPdfUrl(url) {
 }
 
 export default function DocumentCard({ doc }) {
+  if (doc.path) {
+    return (
+      <div className={styles.card}>
+        <Link className={styles.link + ' focus-ring'} to={doc.path}>
+          <h2 className={styles.h2}>{doc.title}</h2>
+          <span className={styles.cta}>Browse files →</span>
+        </Link>
+      </div>
+    )
+  }
+
   const canView = isPdfUrl(doc.url)
   const to = canView ? `/viewer?src=${encodeURIComponent(doc.url)}` : doc.url
-  const props = canView
-    ? { to }
-    : { as: 'a', href: to, target: '_blank', rel: 'noopener noreferrer' }
 
   // If it's not a PDF, we link out; if it is, we push to on-site viewer
   return (
