@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename)
 const app = express()
 const PORT = process.env.PORT || 8787
 const DIST = path.join(__dirname, '..', 'dist')
-const ALLOWED_HOSTS = new Set(['www.justice.gov'])
+const ALLOWED_HOSTS = new Set(['www.justice.gov', 'www.tescoinsurance.com'])
 const ALLOWED_PREFIX = '/epstein/'
 
 // Serve static frontend
