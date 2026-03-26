@@ -11,7 +11,7 @@ const app = express()
 const PORT = process.env.PORT || 8787
 const DIST = path.join(__dirname, '..', 'dist')
 const ALLOWED_HOSTS = new Set(['www.justice.gov', 'www.tescoinsurance.com'])
-const ALLOWED_PREFIX = '/epstein/'
+const ALLOWED_PREFIX = '*'
 
 // Serve static frontend
 app.use(express.static(DIST, { maxAge: '1h', index: false }))
